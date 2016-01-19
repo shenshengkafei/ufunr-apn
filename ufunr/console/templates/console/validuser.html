@@ -50,7 +50,7 @@ table#t01 th	{
 	    {% for user in user_list %}
         {% if user.is_deleted == 'NO' %}
           {% if user.valid_days > 0 %}
-            {% if user.data_left > 0 %}
+            {% if user.data_left > 0.0 %}
             <tr>
               <th>{{ user.account_id }}</th>
               <th>{{ user.valid_days }}</th>

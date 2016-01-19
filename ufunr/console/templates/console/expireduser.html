@@ -58,24 +58,6 @@ table#t01 th	{
         {% endif %}
 	    {% endfor %}
 	  </ul>
-
-
-      {% for user in user_list %}
-        {% if user.is_deleted == 'NO' %}
-          {% if user.valid_days > 0 %}
-            {% if user.data_left > 0 %}
-            <tr>
-              <th>{{ user.account_id }}</th>
-              <th>{{ user.valid_days }}</th>
-              <th>{{ user.data_left }}</th>
-              <th>{{ user.is_deleted }}</th>
-            </tr>
-            {% endif %}
-          {% endif %}
-        {% endif %}
-      {% endfor %}
-
-
 	{% endif %}
   </tr>
 </table>
